@@ -1,0 +1,17 @@
+.vs/
+bin/
+obj/
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+*.pdb
+*.cache
+*.log
+
+out.txt
+advapi32_exports.txt
+kernel32_exports.txt
+ntdll_exports.json
